@@ -1,101 +1,136 @@
 -
     item: 'Minify CSS and JS, and remove unused/redundant code'
     resources: ['https://developers.google.com/speed/docs/insights/MinifyResources']
+    tags: dev, basic
 -
-    item: 'Maintain terse HTML, without over-reliance on `<div>` scaffolding'
+    item: 'Maintain terse (schlank) HTML, without over-reliance on `<div>` scaffolding'
     resources: ['http://designingforperformance.com/optimizing-markup-and-styles/#divitis']
+    tags: dev, basic
 -
     item: 'Use screen reader and keyboard accessible HTML'
     resources: ['https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML']
+    tags: dev, design, basic
 -
-    item: 'Compress raster images'
+    item: 'Compress raster images (notiz: immer rohdateien zur verfügung stellen!)'
     resources: ['https://www.html5rocks.com/en/tutorials/speed/img-compression/']
+    tags: basic, dev, design
 -
-    item: 'Optimize SVG path data'
+    item: 'Optimize SVG path data (notiz: immer rohdateien zur verfügung stellen!)'
     resources: ['https://web-design-weekly.com/2014/10/22/optimizing-svg-web/']
+    tags: basic, dev, design
 -
-    item: 'Make sure heading levels describe a logical section/subsection structure'
+    item: 'Make sure heading levels describe a logical section/subsection structure (see semantic html, konzeption, seo, content...)'
     resources: ['https://webaim.org/techniques/semanticstructure/']
+    tags: dev, design, basic
 -
     item: 'Only include heading elements where they introduce sections of content'
+    tags: dev
 -
-    item: 'Remove potentially insensitive or uninclusive language (use "singular they")'
-    resources: ['http://alexjs.com/']
+    item: 'Give video content captions and transcripts (geht das native mit HTML? custom component?)'
+    tags: content, design, dev
 -
-    item: 'Give video content captions and transcripts'
--
-    item: 'Provide transcripts for audio content'
+    item: 'Provide transcripts for audio content (geht das native mit HTML? custom component?)'
+    tags: content, design, dev
 -
     item: 'Make sure main body (paragraph) text is no smaller than the default (user agent) size'
     resources: ['https://www.smashingmagazine.com/2011/10/16-pixels-body-copy-anything-less-costly-mistake/']
+    tags: design
 -
     item: 'Support "pinch zoom" (remove `user-scalable=no` if present)'
+    tags: dev
 -
-    item: 'Use relative units (`em`, `rem`, and `ch`), especially for font metrics'
+    item: 'Use relative units (`em`, `rem`, `ch`, `vw`, `vh`), especially for font metrics (discuss! vielleicht rem?)'
+    tags: design, dev
 -
     item: 'Make sure styles and scripts are not render blocking'
     resources: ['https://csabapalfi.github.io/eliminate-render-blocking/']
+    tags: basic, dev
 -
     item: 'Install a service worker and cache all applicable assets'
     resources: ['https://css-tricks.com/serviceworker-for-offline/']
+    tags: basic, dev
 -
     item: 'Use content-based, not device-specific, media queries'
-    resources: ['http://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/#content']
+    resources: ['http://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/#content', 'https://codepen.io/filtercake/pen/MwNbGz']
+    tags: design, dev
 -
-    item: 'Provide alternatives and/or descriptions for complex visualizations'
+    item: 'Provide alternatives and/or descriptions for complex visualizations (alt tag?) (mit content mitliefern bidde)'
+    tags: content, dev, design
 -
-    item: 'Include only clear, meaningful animations'
+    item: 'Include only clear, meaningful animations (???)'
+    tags: design, dev
 -
     item: 'Honor requests to remove animation via the `prefers-reduced-motion` media query'
+    tags: dev
 -
-    item: 'Make sure controls do not elicit unexpected or jarring behavior'
+    item: 'Make sure controls do not elicit unexpected or jarring behavior (no hijacking of native behaviour?)'
     resources: ['https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-receive-focus.html', 'https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-unpredictable-change.html']
+    tags: dev
 -
-    item: 'Do not include third parties that compromise user privacy'
+    item: 'Do not include third parties that compromise user privacy (follow do-not-track!)'
     resources: ['https://css-tricks.com/potential-dangers-of-third-party-javascript/']
+    tags: dev, marketing
 -
-    item: 'Do not recreate supported and expected browser behaviors with bespoke scripts'
+    item: 'Do not recreate supported and expected browser behaviors with bespoke scripts (keep it native damnit)'
+    tags: dev
 -
-    item: 'Support Windows high contrast mode (use images, not background images)'
+    item: 'Support Windows high contrast mode (use images, not background images) (???)'
     resources: ['http://adrianroselli.com/2012/08/css-background-images-high-contrast-mode.html']
+    tags: dev, design
 -
-    item: 'Provide alternative text for salient images'
+    item: 'Provide alternative text for salient (wichtige) images'
     resources: ['https://www.w3.org/WAI/tutorials/images/decision-tree/']
+    tags: conent, dev, design
 -
     item: 'Apply `alt="` or `aria-hidden="true"` to decorative images'
     resources: ['https://www.w3.org/WAI/tutorials/images/decorative/']
+    tags: dev, design, content
 -
-    item: 'Make sure text and background colors contrast sufficiently'
+    item: 'Make sure text and background colors contrast sufficiently (standard test tool, auch mal auf alten monitor gucken)'
     resources: ['https://accessibility.blog.gov.uk/2016/06/17/colour-contrast-why-does-it-matter/']
+    tags: design
 -
     item: 'Provide `<title>`s that name the site and the specific page'
     resources: ['https://www.w3.org/TR/WCAG20-TECHS/G88.html']
+    tags: dev, basic, content
 -
-    item: 'Provide large touch "targets" for interactive elements'
+    item: 'Provide large touch "targets" for interactive elements (Apple UIG) (pagerank/lighthouse/webpack)'
     resources: ['http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size']
+    tags: design, dev
 -
     item: 'Use data tables (`<table>`) for data only, not visual layout purposes'
+    tags: basic, dev
 -
-    item: 'Make scrollable elements focusable for keyboard users'
+    item: 'Make scrollable elements focusable for keyboard users ??? (test? resource?)'
+    tags: dev
 -
-    item: 'Do not rely on color for differentiation of visual elements'
+    item: 'Do not rely on color for differentiation of visual elements (farbe ist enhancement) (semantic???)'
+    tags: design, dev
 -
-    item: 'Use the same design patterns to solve the same problems'
+    item: 'Use the same design patterns to solve the same problems (components etc...)'
+    tags: design, dev
 -
     item: 'Ensure keyboard focus order is logical regarding visual layout'
+    tags: dev
 -
     item: 'Lazy load large image assets'
+    tags: dev
 -
-    item: 'Honour DNT (Do Not Track) header'
+    item: 'Honour DNT (Do Not Track) header (check cookie policy gedöns)'
     resources: ['https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DNT']
+    tags: dev, marketing
 -
     item: 'Translate / spell out acronyms the first time you use them'
+    tags: content, design
 -
-    item: 'Do not hijack standard scrolling behavior'
+    item: 'Do not hijack standard scrolling behavior (keep it native)'
+    tags: dev, design
 -
     item: 'Move focus between dialogs and the controls that invoked them'
+    tags: dev
 -
-    item: 'Give all form elements permanently visible labels'
+    item: 'Give all form elements permanently visible labels (standard und test)'
+    tags: design
 -
     item: 'Give grouped form elements group labels'
 -
